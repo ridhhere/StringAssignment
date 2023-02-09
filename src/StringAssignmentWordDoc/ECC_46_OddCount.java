@@ -1,3 +1,4 @@
+package StringAssignmentWordDoc;
 
 public class ECC_46_OddCount {
 	
