@@ -6,13 +6,21 @@ public class Assignment05 {
 	static String isPalindrome(String input) {
 		StringBuilder reverse = new StringBuilder(input).reverse();
 		String new1=reverse.toString();
-		return new1;
+		if(input.equalsIgnoreCase(new1)) {
+			return "Is Palindrom : "+ new1;
+		} else {
+			return "Not Palindrom : " + new1;
+		}
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(isPalindrome("ridh"));
-		System.out.println(isPalindrome("A man, a plan, a canal – Panama"));
+		System.out.println(isPalindrome("welcome"));
+		System.out.println(isPalindrome("racecar"));
+		System.out.println(isPalindrome("civic"));
+		System.out.println(isPalindrome("noon"));
+		System.out.println(isPalindrome("level"));
 
 	}
 
