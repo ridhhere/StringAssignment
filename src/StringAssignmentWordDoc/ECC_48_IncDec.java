@@ -1,5 +1,7 @@
 package StringAssignmentWordDoc;
 
+import java.util.Arrays;
+
 public class ECC_48_IncDec {
 	
 	static int[] getIncreseDecrease(int input) {
@@ -8,33 +10,27 @@ public class ECC_48_IncDec {
 		if (input <= 1 || input > 20) {
 			return null;
 		}
-		int[] output = new int[input * 2 - 1];
-		int value = 0;
-		System.out.println(output.length);
+
+		int[] result = new int[input * 2 - 1];
+		int index = 0;
 		for (int i = 1; i <= input; i++) {
-			output[value++] = i;
-			output[value++] = input + 1 - i;
+			result[index++] = i;
+			result[result.length - index] = input - i + 1;
 		}
-		return output;
+		return result;
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		int input1 = 1;
-//		int input2 = 0;
+		int input1 = 0;
+		int input2 = 21;
 		int input3 = 20;
-		int input4 = 21;
-		int input5 = 15;
+		int input4 = 12;
 
-//		System.out.println(getIncreseDecrease(input1));
-//		System.out.println(getIncreseDecrease(input2));
-		System.out.println(getIncreseDecrease(input3));{
-			sdfsdfds
-		}
-//		System.out.println(getIncreseDecrease(input4));
-//		System.out.println(getIncreseDecrease(input5));
-
-
+		System.out.println(Arrays.toString(getIncreseDecrease(input1)));
+		System.out.println(Arrays.toString(getIncreseDecrease(input2)));
+		System.out.println(Arrays.toString(getIncreseDecrease(input3)));
+		System.out.println(Arrays.toString(getIncreseDecrease(input4)));
 	}
 
 }
